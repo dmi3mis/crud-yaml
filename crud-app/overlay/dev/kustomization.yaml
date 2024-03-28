@@ -5,6 +5,10 @@ resources:
 - ../../base
 - crud-apps-dev-certificate.yaml
 
+commonLabels:
+  environment: dev
+  sre-team: green
+
 patches:
 - path: crud-app-replicas.yaml
   target:

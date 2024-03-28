@@ -61,7 +61,7 @@ kubectl apply -f crud-php-mysql/Kubernetes/tekton/pipeline/pipeline.yaml
 
 ```console
 kubectl create -f ~/crud-php-mysql/Kubernetes/tekton/pipelinerun/pipelinerun.yaml
-root@ubuntu:~/crud-php-mysql# tkn pipelinerun ls
+tkn pipelinerun ls
 NAME                         STARTED          DURATION   STATUS
 clone-build-push-run-tff6b   2 seconds ago    ---        Running
 
