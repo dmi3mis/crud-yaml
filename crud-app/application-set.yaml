@@ -1,0 +1,37 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: crud-app
+  namespace: argocd
+spec:
+  generators:
+  - list:
+      elements:
+      - overlay: dev
+        gitRepo: https://github.com/dmi3mis/crud-yaml.git
+        appPath: crud-app/overlay
+        appBranch: master
+      - overlay: prod
+        gitRepo: https://github.com/dmi3mis/crud-yaml.git
+        appPath: crud-app/overlay
+        appBranch: master
+  template:
+    metadata:
+      name: 'crud-php-mysql-{{overlay}}'
+    spec:
+      project: default
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - PruneLast=true
+          - Validate=false
+          - CreateNamespace=true
+      source:
+        repoURL: '{{gitRepo}}'
+        targetRevision: '{{appBranch}}'
+        path: '{{appPath}}/{{overlay}}'
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: 'crud-php-mysql-{{overlay}}'
