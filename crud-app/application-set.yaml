@@ -10,11 +10,11 @@ spec:
       - overlay: dev
         gitRepo: https://github.com/dmi3mis/crud-yaml.git
         appPath: crud-app/overlay
-        appBranch: master
+        appBranch: main
       - overlay: prod
         gitRepo: https://github.com/dmi3mis/crud-yaml.git
         appPath: crud-app/overlay
-        appBranch: master
+        appBranch: main
   template:
     metadata:
       name: 'crud-php-mysql-{{overlay}}'
