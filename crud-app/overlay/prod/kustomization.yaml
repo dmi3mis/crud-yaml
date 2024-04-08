@@ -16,7 +16,7 @@ patchesStrategicMerge:
 
 imageTags:
   - name: dmi3mis/crud-app
-    newTag: c2bed5f6ee1d6124410d8a1a07e480a026b5805a
+    newTag: 298a52b34d83d6c382ec50245af0506776315f57
 
 generatorOptions:
   disableNameSuffixHash: true
