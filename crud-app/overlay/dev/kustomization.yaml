@@ -18,7 +18,7 @@ patches:
     kind: Ingress
 imageTags:
   - name: dmi3mis/crud-app
-    newTag: 298a52b34d83d6c382ec50245af0506776315f57
+    newTag: 4a4a5a8814038e634ea94ec0093ca46fff106953
 
 generatorOptions:
   disableNameSuffixHash: true
