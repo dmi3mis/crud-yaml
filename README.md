@@ -1,7 +1,7 @@
 # yaml manifests to deploy simple Crud-PHP-MySQL Application with Tekton and ArgoCD
 
 
-Application source codes are [Here](https://giuthub.com/dmi3mis/crud-php-mysql)
+Application source codes are [Here](https://github.com/dmi3mis/crud-php-mysql)
 
 Here is quick and very dirty instruction
 
