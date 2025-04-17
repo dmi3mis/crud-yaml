@@ -3,7 +3,6 @@ kind: Kustomization
 
 resources:
   - ../../base
-  - crud-apps-prod-certificate.yaml
 
 commonLabels:
   environment: prod
