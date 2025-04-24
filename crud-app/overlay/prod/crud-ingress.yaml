@@ -16,3 +16,7 @@ spec:
             name: crud-app
             port:
               number: 8080
+  tls:
+  - hosts:
+    - crud-prod.apps.dmi3lab.ru
+    secretName: crud-prod-ingress-cert-secret
